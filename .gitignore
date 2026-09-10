@@ -1,0 +1,17 @@
+# Local environments and runtime files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+.env
+.env.*
+!.env.example
+*.log
+*.zip
+desktop.ini
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
