@@ -66,4 +66,4 @@ Both inputs, the four application modules, the two existing test files, and the 
 
 ## Remaining hosted checks
 
-This validates a local Windows deployment copy. Streamlit Community Cloud's Linux environment, account permissions, deployed URL, viewer authentication, and performance with concurrent users have not yet been tested. Complete the hosted checks in [README.md](README.md) after publishing. No GitHub upload, Streamlit deployment, or viewer invitation was performed during preparation.
+This validates a local Windows deployment copy. Streamlit Community Cloud's Linux environment, account permissions, deployed URL, viewer authentication, and performance with concurrent users have not yet been tested. Complete the hosted checks in [README.md](README.md) after publishing. These checks preceded GitHub publication. The package has since been published privately at [Corne173/samrass-explorer](https://github.com/Corne173/samrass-explorer). Streamlit deployment and viewer access remain to be configured.

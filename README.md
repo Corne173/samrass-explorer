@@ -4,31 +4,25 @@ Prepared on **10 September 2026** for Streamlit Community Cloud. This applicatio
 
 **Use a private GitHub repository and a private Streamlit app for the initial deployment.** The package contains the full accident data shown by the explorer. Repository privacy controls access to the files; Streamlit sharing settings control access to the running application.
 
-## 1. Publish this folder with GitHub Desktop
+## 1. GitHub publication is complete
 
-The prepared local folder already has a Git repository on branch `main` and an initial commit. It has no remote destination. If you are using the source ZIP instead, follow the ZIP instructions near the end first.
+The app is published in the private repository [Corne173/samrass-explorer](https://github.com/Corne173/samrass-explorer), on branch `main`. The prepared local repository is connected to it as `origin`. The app code, both data files, the theme, pinned dependencies, and validation notes are included.
 
-1. Install [GitHub Desktop](https://desktop.github.com/) if needed and sign into your GitHub account.
-2. Choose **File → Add local repository → Choose** and select this `samrass-explorer` folder. Select the folder containing this README, `.streamlit`, and `SAMRAS`.
-3. Click **Add repository**, then **Publish repository**.
-4. Use the name `samrass-explorer`, keep **Keep this code private** selected, and publish to your personal account unless the project belongs in an organisation account.
-5. Wait for the upload to finish. Use **Repository → View on GitHub** to confirm the repository is marked **Private**, the branch is `main`, and the folders are present.
+**Continue with step 2 below.** You do not need to upload the files or create a repository. The Streamlit app has not yet been deployed.
 
-These steps follow GitHub's [local repository instructions](https://docs.github.com/en/desktop/adding-and-cloning-repositories/adding-a-repository-from-your-local-computer-to-github-desktop) and [publication instructions](https://docs.github.com/en/desktop/adding-and-cloning-repositories/adding-an-existing-project-to-github-using-github-desktop). You do not need to create an empty repository on the GitHub website first.
-
-The main CSV is **61,633,584 bytes** (about 61.6 MB). GitHub Desktop can upload it through Git. The website's file-upload form has a 25 MiB limit, so use Desktop for this package. Git may display a large-file warning above 50 MiB; this file is below GitHub's 100 MiB blocking limit. [GitHub file limits](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
+To edit this repository from another computer, sign into [GitHub Desktop](https://desktop.github.com/) and clone `Corne173/samrass-explorer`. The main CSV is about 61.6 MB, so use Git or Desktop for subsequent data uploads; it exceeds GitHub's 25 MiB browser-upload limit but is below its 100 MiB Git limit. [GitHub file limits](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
 
 ## 2. Deploy on Streamlit Community Cloud
 
 1. Open [Streamlit Community Cloud](https://share.streamlit.io/), sign in, and connect your GitHub account. Grant the additional access needed for private repositories when prompted.
 2. Choose **Create app** and the option for an app you already have in GitHub.
-3. Enter the settings below. Replace `YOUR_GITHUB_NAME` with the account that owns the repository.
+3. Enter the settings below using the published repository.
 4. Open **Advanced settings**, select **Python 3.13**, leave secrets empty, and save.
 5. Click **Deploy** and wait for installation and startup. Check the build logs if an error appears.
 
 | Setting | Value |
 | --- | --- |
-| Repository | `YOUR_GITHUB_NAME/samrass-explorer` |
+| Repository | `Corne173/samrass-explorer` |
 | Branch | `main` |
 | Main file path | `SAMRAS/interactive_explorer/app.py` |
 | Python version | `3.13` |
@@ -89,7 +83,7 @@ python -m venv .venv
 
 ## If starting from the ZIP
 
-The ZIP contains the application files, including the hidden configuration files, but excludes Git history and Python environments. Extract it first. In GitHub Desktop, choose **File → Add local repository** and select the extracted inner `samrass-explorer` folder. If Desktop reports that it is not a Git repository, use its **create a repository here** option. Keep the destination at that same folder; do not create a second nested folder. Leave the Git ignore and licence template choices at **None**, because `.gitignore` is already supplied and this package does not grant an open-source licence. If files remain in the Changes panel, commit them to `main`, then follow step 1 above to publish.
+The ZIP contains the application files and hidden configuration files, but excludes Git history and Python environments. Extract it for an offline copy or local execution. For changes to the published app, clone the existing private repository through GitHub Desktop so the connection and history are retained.
 
 ## Package layout
 
